@@ -300,11 +300,6 @@ bool hamlib_init(bool bPtt)
 		show_error("Get Freq", Ex.what());
 		need_freq = false;
 	}
-	if (!need_freq) {
-		xcvr->close();
-		LOG_VERBOSE("Failed freq test");
-		return false;
-	}
 
 	LOG_DEBUG("trying mode request");
 	try {
